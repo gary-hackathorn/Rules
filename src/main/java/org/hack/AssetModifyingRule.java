@@ -24,12 +24,12 @@ public class AssetModifyingRule implements Rule {
 
     @Override
     public void evaluate(Map<String, Object> asset, Map<String, Object> globals) {
-        Map<String, Object> commponMap = new HashMap<String, Object>(asset);
-        commponMap.putAll(globals);
-        if (condition.apply(commponMap))
-            action.evaluate(commponMap);
+        Map<String, Object> commonMap = new HashMap<String, Object>(asset);
+        commonMap.putAll(globals);
+        if (condition.apply(commonMap))
+            action.evaluate(commonMap);
         for(String key: globals.keySet())
-            commponMap.remove(key);
-        asset.putAll(commponMap);
+            commonMap.remove(key);
+        asset.putAll(commonMap);
     }
 }
