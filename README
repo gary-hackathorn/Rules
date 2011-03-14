@@ -1,1 +1,18 @@
-This file was created by IntelliJ IDEA 10.0.2 for binding GitHub repository
+Exploration of a simple rules based system to markup up items.
+
+Will allow data driven "rule" to add or modify data items.
+
+The primary concern for this engine is that it be configurable on the fly without the need
+to compile a set of rules.  Traditional rules engine require that rules be compiled into some type
+of run-time artifact.  The overhead for these artifacts is high when the number of rule configurations is very high.
+This approach is designed to address thousand of unique rules configurations.  Each configuration consumes little
+resources.
+
+The engine must have a Big O of no more than n. To meet the goal a few limitations have been possed on the project.
+
+
+Limitations:
+1. Input data can be a list of items and global data.
+2. A rule can only data from one item at a time.  Rules cannot iterate.
+3. An engine can takes a list of rules and the input data.
+4. Iteration is handle by the engine.
