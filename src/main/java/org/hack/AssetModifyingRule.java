@@ -5,6 +5,13 @@ import com.google.common.base.Predicate;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * AssetModifyingRule - modifies asset attributes
+ *     <ul>
+ *         <li>Attributes should be unique to each list</li>
+ *         <li>New attributes will be added to the asset list<li>
+ *     </ul>
+ */
 public class AssetModifyingRule implements Rule {
 
     Predicate<Map<String,Object>> condition;
