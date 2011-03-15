@@ -15,13 +15,13 @@ public class GlobalModifyingRule implements Rule {
     }
 
     @Override
-    public void evaluate(Map<String, Object> assset, Map<String, Object> globals) {
-        Map<String,Object> map = new HashMap<String,Object>(assset);
+    public void evaluate(Map<String, Object> asset, Map<String, Object> globals) {
+        Map<String,Object> map = new HashMap<String,Object>(asset);
         map.putAll(globals);
         if(condition.apply(map))
         {
             action.evaluate(map);
-            for(String key:assset.keySet())
+            for(String key:asset.keySet())
                 map.remove(key);
             globals.putAll(map);
         }

@@ -8,7 +8,7 @@ of run-time artifact.  The overhead for these artifacts is high when the number 
 This approach is designed to address thousand of unique rules configurations.  Each configuration consumes little
 resources.
 
-The engine must have a Big O of no more than n. To meet the goal a few limitations have been possed on the project.
+The engine must have a Big O of no more than n. To meet the goal a few limitations have been imposed on the project.
 
 
 Limitations:
