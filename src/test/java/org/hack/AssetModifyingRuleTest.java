@@ -43,4 +43,14 @@ public class AssetModifyingRuleTest {
         assertEquals("Global got duplicated to asset map", null, asset.get("globalKey"));
         assertEquals("value",asset.get("key"));
     }
+
+    @Test
+    public void testBothMapsContainSameKey() throws Exception {
+        Rule rule = new AssetModifyingRule(new JexlCondition("true"), new JexlAction("key='new value'"));
+        asset.put("key","value");
+        globals.put("key","value");
+        rule.evaluate(asset, globals);
+        assertEquals("value", globals.get("key"));
+        assertEquals("value",asset.get("key"));
+    }
 }

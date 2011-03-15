@@ -51,4 +51,16 @@ public class GlobalModifyingRuleTest {
         assertEquals(null, asset.get("key"));
         assertEquals("value", globals.get("key"));
     }
+
+    @Test
+    public void testBothMapsContainSameValue() throws Exception {
+        Predicate<Map<String,Object>> condition = new JexlCondition("true");
+        Action action = new JexlAction("key = 'new value'");
+        asset.put("key","assetValue");
+        globals.put("key","globalsValue");
+        Rule sut = new GlobalModifyingRule(condition, action);
+        sut.evaluate(asset, globals);
+        assertEquals("assetValue", asset.get("key"));
+        assertEquals("globalsValue", globals.get("key"));
+    }
 }
