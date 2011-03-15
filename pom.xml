@@ -7,7 +7,18 @@
     <groupId>Rules</groupId>
     <artifactId>Rules</artifactId>
     <version>1.0</version>
+    <name>Simple Markup Rules System</name>
+    <description>A simple rule driven system to decorate asset data.</description>
+    <url>https://github.com/gary-hackathorn/Rules</url>
+    <inceptionYear>2011</inceptionYear>
 
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/gary-hackathorn/Rules/issues</url>
+    </issueManagement>
+    <scm>
+        <url>https://github.com/gary-hackathorn/Rules</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
