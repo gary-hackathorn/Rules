@@ -39,4 +39,16 @@ public class GlobalModifyingRuleTest {
         assertEquals(null, asset.get("key"));
         assertEquals("value", globals.get("key"));
     }
+
+    @Test
+    public void testTrueConditionWitAssetValue() throws Exception {
+        Predicate<Map<String,Object>> condition = new JexlCondition("true");
+        Action action = new JexlAction("key = 'value'");
+        asset.put("assetKey","assetValue");
+        Rule sut = new GlobalModifyingRule(condition, action);
+        sut.evaluate(asset, globals);
+        assertEquals("assetValue", asset.get("assetKey"));
+        assertEquals(null, asset.get("key"));
+        assertEquals("value", globals.get("key"));
+    }
 }
