@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 public class DefaultEvaluationContext implements EvaluationContext{
-    List<Map<String, Object>> assets;
-    Map<String, Object> globals;
+    private final List<Map<String, Object>> assets;
+    private final Map<String, Object> globals;
 
     public DefaultEvaluationContext(List<Map<String, Object>> asset, Map<String, Object> globals) {
         this.assets = asset;

@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class JexlAction extends CommonJexl implements Action{
 
-    Expression expression;
+    private final Expression expression;
 
     public JexlAction(String expressionString) {
         this.expression = engine.createExpression(expressionString);

@@ -14,8 +14,8 @@ import java.util.Map;
  */
 public class AssetModifyingRule implements Rule {
 
-    Predicate<Map<String,Object>> condition;
-    Action action;
+    private final Predicate<Map<String,Object>> condition;
+    private final Action action;
 
     public AssetModifyingRule(Predicate<Map<String, Object>> condition, Action action) {
         this.condition = condition;

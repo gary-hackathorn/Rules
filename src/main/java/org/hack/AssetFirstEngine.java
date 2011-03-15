@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AssetFirstEngine implements Engine {
-    List<Rule> rules = new ArrayList<Rule>();
+    private final List<Rule> rules;
 
     public AssetFirstEngine(List<Rule> rules) {
         this.rules = rules;
