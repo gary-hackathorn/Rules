@@ -8,7 +8,7 @@ import org.apache.commons.jexl2.MapContext;
 
 import java.util.Map;
 
-public class JexlCondition extends CommonJexl implements Predicate<Map<String,Object>> {
+class JexlCondition extends CommonJexl implements Predicate<Map<String,Object>> {
 
     private final Expression expression;
 

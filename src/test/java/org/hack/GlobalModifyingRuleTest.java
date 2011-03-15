@@ -11,8 +11,8 @@ import static junit.framework.Assert.assertEquals;
 
 
 public class GlobalModifyingRuleTest {
-    protected Map<String, Object> asset;
-    protected Map<String, Object> globals;
+    private Map<String, Object> asset;
+    private Map<String, Object> globals;
 
     @Before
     public void setUp() throws Exception {
@@ -22,7 +22,7 @@ public class GlobalModifyingRuleTest {
 
     @Test
     public void testFalseCondition() throws Exception {
-        Predicate condition = new JexlCondition("false");
+        Predicate<Map<String,Object>> condition = new JexlCondition("false");
         Action action = new JexlAction("key = 'value'");
         Rule sut = new GlobalModifyingRule(condition, action);
         sut.evaluate(asset, globals);
@@ -32,7 +32,7 @@ public class GlobalModifyingRuleTest {
 
     @Test
     public void testTrueCondition() throws Exception {
-        Predicate condition = new JexlCondition("true");
+        Predicate<Map<String,Object>> condition = new JexlCondition("true");
         Action action = new JexlAction("key = 'value'");
         Rule sut = new GlobalModifyingRule(condition, action);
         sut.evaluate(asset, globals);

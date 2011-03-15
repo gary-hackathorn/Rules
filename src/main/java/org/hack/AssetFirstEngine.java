@@ -11,11 +11,10 @@ public class AssetFirstEngine implements Engine {
         this.rules = rules;
     }
 
-    public EvaluationContext evaluate(EvaluationContext context)
+    public void evaluate(EvaluationContext context)
     {
         for(Map<String,Object> asset:context.getAssets())
             for(Rule rule: rules)
                 rule.evaluate(asset, context.getGlobals());
-        return context;
     }
 }

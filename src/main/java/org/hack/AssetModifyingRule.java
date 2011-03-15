@@ -4,6 +4,7 @@ import com.google.common.base.Predicate;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 /**
  * AssetModifyingRule - modifies asset attributes

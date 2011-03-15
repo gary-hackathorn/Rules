@@ -9,8 +9,8 @@ import java.util.Map;
 import static junit.framework.Assert.assertEquals;
 
 public class AssetModifyingRuleTest {
-    protected Map<String, Object> asset;
-    protected Map<String, Object> globals;
+    private Map<String, Object> asset;
+    private Map<String, Object> globals;
 
     @Before
     public void setUp() throws Exception {

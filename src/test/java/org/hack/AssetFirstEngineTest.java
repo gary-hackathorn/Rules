@@ -7,21 +7,19 @@ import org.junit.Test;
 import java.util.*;
 
 import static org.easymock.EasyMock.expect;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 
 public class AssetFirstEngineTest extends EasyMockSupport {
 
 
-    protected Rule mockRule1;
-    protected Rule mockRule2;
-    protected List<Rule> rules;
-    protected EvaluationContext mockContext;
-    protected List<Map<String, Object>> assets;
-    protected HashMap<String, Object> asset1;
-    protected HashMap<String, Object> asset2;
-    protected HashMap<String, Object> globals;
-    protected Iterator<Map<String, Object>> mockIterator;
+    private Rule mockRule1;
+    private Rule mockRule2;
+    private List<Rule> rules;
+    private EvaluationContext mockContext;
+    private List<Map<String, Object>> assets;
+    private HashMap<String, Object> asset1;
+    private HashMap<String, Object> asset2;
+    private HashMap<String, Object> globals;
+
 
     @Test
     public void testEngine() throws Exception {
@@ -49,11 +47,11 @@ public class AssetFirstEngineTest extends EasyMockSupport {
         rules.add(mockRule2);
         mockContext = createMock(EvaluationContext.class);
         asset1 = new HashMap<String, Object>();
+        asset2 = new HashMap<String, Object>();
         assets = new ArrayList<Map<String,Object>>();
         assets.add(asset1);
         assets.add(asset2);
 
         globals = new HashMap<String, Object>();
-        mockIterator = createMock(Iterator.class);
     }
 }
