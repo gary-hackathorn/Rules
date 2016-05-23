@@ -13,8 +13,8 @@ public class AssetFirstEngine implements Engine {
 
     public void evaluate(EvaluationContext context)
     {
-        for(Map<String,Object> asset:context.getAssets())
+        for(Map<String,Object> assetMap:context.getAssets())
             for(Rule rule: rules)
-                rule.evaluate(asset, context.getGlobals());
+                rule.evaluate(assetMap, context.getGlobals());
     }
 }
