@@ -13,7 +13,7 @@ public class AssetModifyingRuleTest {
     private Map<String, Object> globals;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         asset = new HashMap<String,Object>();
         globals = new HashMap<String,Object>();
     }

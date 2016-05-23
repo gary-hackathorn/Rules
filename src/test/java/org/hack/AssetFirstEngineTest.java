@@ -4,7 +4,10 @@ import org.easymock.EasyMockSupport;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.easymock.EasyMock.expect;
 
@@ -39,7 +42,7 @@ public class AssetFirstEngineTest extends EasyMockSupport {
 
     @SuppressWarnings(value = "unchecked")
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         rules = new ArrayList<Rule>();
         mockRule1 = createMock(Rule.class);
         rules.add(mockRule1);
