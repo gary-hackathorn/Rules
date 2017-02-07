@@ -7,4 +7,8 @@ node { // <1>
         sh 'man clean install'
     }
 
+    stage ('test') {
+        echo 'testing...'
+    }
+
 }
