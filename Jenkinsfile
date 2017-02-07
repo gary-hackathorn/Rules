@@ -10,7 +10,7 @@ node { // <1>
     }
 
     stage ('test') {
-        echo 'testing...'
+        echo 'testing....'
     }
 
 }
