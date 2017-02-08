@@ -10,7 +10,7 @@ node { // <1>
         echo 'code checked out'
         sh '/Users/gary/apache-maven-3.3.9/bin/mvn clean install'
     }
-
+    echo 'build done'
     stage ('test') {
         echo 'testing....'
     }
